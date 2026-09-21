@@ -1,0 +1,19 @@
+Distance-KV-Pattern
+Copyright 2026 Distance-KV-Pattern authors
+
+Model-specific training and inference components follow the execution
+structure of Hugging Face Transformers 4.45.0, distributed under the Apache
+License 2.0:
+
+    https://github.com/huggingface/transformers
+
+The packed KV update CUDA helper is derived from FFY0/DefensiveKV:
+
+    https://github.com/FFY0/DefensiveKV
+    commit 9251b95e7e282a6c18dd98ef6318dd489e639a58
+    original path kvpress/csrc/csrc/cuda_api.cu
+
+The original helper is Copyright (c) 2023 66RING and distributed under the
+MIT License. Its license is retained at:
+
+    src/distance_kv_pattern/inference/static_q_head/csrc/LICENSE

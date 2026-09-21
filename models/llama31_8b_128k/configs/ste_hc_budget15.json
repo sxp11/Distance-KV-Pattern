@@ -1,0 +1,73 @@
+{
+  "model_name_or_path": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "manifest_group": [
+    [
+      "./models/llama31_8b_128k/data/manifests/train/num/n4/q1/round_000.jsonl",
+      "./models/llama31_8b_128k/data/manifests/train/num/n4/q3/round_000.jsonl",
+      "./models/llama31_8b_128k/data/manifests/train/word/n4/q1/round_000.jsonl",
+      "./models/llama31_8b_128k/data/manifests/train/word/n4/q3/round_000.jsonl"
+    ],
+    [
+      "./models/llama31_8b_128k/data/manifests/train/num/n4/q1/round_001.jsonl",
+      "./models/llama31_8b_128k/data/manifests/train/num/n4/q3/round_001.jsonl",
+      "./models/llama31_8b_128k/data/manifests/train/word/n4/q1/round_001.jsonl",
+      "./models/llama31_8b_128k/data/manifests/train/word/n4/q3/round_001.jsonl"
+    ],
+    [
+      "./models/llama31_8b_128k/data/manifests/train/num/n4/q1/round_002.jsonl",
+      "./models/llama31_8b_128k/data/manifests/train/num/n4/q3/round_002.jsonl",
+      "./models/llama31_8b_128k/data/manifests/train/word/n4/q1/round_002.jsonl",
+      "./models/llama31_8b_128k/data/manifests/train/word/n4/q3/round_002.jsonl"
+    ],
+    [
+      "./models/llama31_8b_128k/data/manifests/train/num/n4/q1/round_003.jsonl",
+      "./models/llama31_8b_128k/data/manifests/train/num/n4/q3/round_003.jsonl",
+      "./models/llama31_8b_128k/data/manifests/train/word/n4/q1/round_003.jsonl",
+      "./models/llama31_8b_128k/data/manifests/train/word/n4/q3/round_003.jsonl"
+    ]
+  ],
+  "retrieval_checkpoint": "./models/llama31_8b_128k/initialization/artifacts/formal/h100_rounds_000_003_condition_balanced/retrieval_scores.pt",
+  "retrieval_metric": "retrieval_score_at_k",
+  "initial_keep_floor": 0.95,
+  "initial_keep_gain": 0.04,
+  "initial_keep_mapping": "logistic",
+  "initial_keep_target_mean": 0.7,
+  "initial_keep_score_slope": 6,
+  "initial_keep_probability_min": 0.001,
+  "initial_keep_probability_max": 0.999,
+  "learning_rate": 0.01,
+  "l0_lambda": 0.5,
+  "l0_start_step": 0,
+  "l0_ramp_steps": 4,
+  "polarization_lambda": 0,
+  "polarization_start_step": 0,
+  "polarization_ramp_steps": 0,
+  "gradient_clip_norm": 1,
+  "hard_mask_threshold": 0.5,
+  "master_seed": 20260819,
+  "shuffle_contexts": false,
+  "torch_dtype": "bfloat16",
+  "attn_implementation": "flash_attention_2",
+  "checkpoint_layers": true,
+  "ddp_timeout_minutes": 120,
+  "resume": true,
+  "dry_run_world_size": 8,
+  "gate_forward_mode": "st_topk",
+  "st_topk_keep_ratios": [
+    0.15
+  ],
+  "max_optimizer_steps": 44,
+  "optimizer_steps_this_run": 28,
+  "continuation_checkpoint": "./models/llama31_8b_128k/training/artifacts/hc_step16/milestones/step_0016.pt",
+  "continuation_expected_step": 16,
+  "milestone_steps": [
+    20,
+    24,
+    28,
+    32,
+    36,
+    40,
+    44
+  ],
+  "output_dir": "./models/llama31_8b_128k/training/artifacts/ste_hc_budget15"
+}

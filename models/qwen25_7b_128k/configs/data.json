@@ -1,0 +1,20 @@
+{
+  "schema_version": 2,
+  "model_name_or_path": "Qwen/Qwen2.5-7B-Instruct",
+  "master_seed": 20260801,
+  "layout": {
+    "total_tokens": 131072,
+    "context_tokens": 130816,
+    "block_size": 128,
+    "sink_blocks": 1,
+    "recent_blocks": 8,
+    "needle_margin_tokens": 16
+  },
+  "train": {
+    "value_types": ["num", "word"],
+    "needle_counts": [1, 2, 4, 8],
+    "template_ids": ["Q1", "Q3"],
+    "coverage_rounds": 1
+  },
+  "heldout_templates": ["Q2", "Q4"]
+}

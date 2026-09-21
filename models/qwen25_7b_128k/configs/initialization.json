@@ -1,0 +1,16 @@
+{
+  "model_name_or_path": "Qwen/Qwen2.5-7B-Instruct",
+  "manifest_root": "./models/qwen25_7b_128k/data/manifests/train",
+  "coverage_rounds": [0, 1, 2, 3],
+  "value_types": ["num", "word"],
+  "needle_count": 4,
+  "template_ids": ["Q1", "Q3"],
+  "retrieval_k": 5,
+  "top_q": 2,
+  "master_seed": 20260819,
+  "torch_dtype": "bfloat16",
+  "attn_implementation": "flash_attention_2",
+  "world_size": 8,
+  "aggregation": "equal_condition_round_after_within_condition_distance_mean",
+  "active_artifact": "./models/qwen25_7b_128k/initialization/artifacts/formal/h100_rounds_000_003_condition_balanced/retrieval_scores.pt"
+}
